@@ -6,4 +6,4 @@ from .models import Producto
 def petshop(request):
     productos=Producto.objects.all()
     context={'productos':productos}
-    return render(request, 'petshop.html', context)
+    return render(request, 'producto/petshop.html', context)

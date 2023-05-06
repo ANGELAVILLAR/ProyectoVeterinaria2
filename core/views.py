@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Contact
+from .models import Contact, Producto
 
 def home(request):
     return render(request, "core/home.html")
@@ -19,4 +19,8 @@ def contact(request):
     context= {'contacts':contacts}
     return render(request, 'core/contact.html', context)
 
+def petshop(request):
+    productos=Producto.objects.all()
+    context={'productos':productos}
+    return render(request, 'core/petshop.html', context)
 

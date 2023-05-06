@@ -1,5 +1,7 @@
 {% extends 'core/layout.html' %}
 
+<!--Contenido bloques superiores-->
+
 {% block title %}Acerca de{% endblock %} 
 
 {% block background %}{% load static %}{% static 'core\assets\img\portfolio\logovet.png' %}{% endblock %}
@@ -16,4 +18,35 @@
         <p class="masthead-subheading font-weight-light mb-0">Dra. Nelcy Urueña Rivera</p>
     </div>
 </header>
+{% endblock %}
+
+<!--Contenido pagina quienes somos-->
+
+{% block content %}
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        
+        <h2 class="page-section-heading text-center text-uppercase text-white">¿QUIENES SOMOS?</h2>
+        
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead">Este es un prototipo para la página web de la veterinaria Mis Mascotas.</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">Proyecto formativo SENA. ADSI 427299</p></div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light">
+                <i class="fas fa-download me-2"></i>
+                Ingresa a la Tienda!
+            </a>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

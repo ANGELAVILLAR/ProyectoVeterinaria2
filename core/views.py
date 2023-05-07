@@ -8,7 +8,7 @@ def about(request):
     return render(request, "core/about.html")
 
 def petshop(request):
-    return render(request, "producto/petshop.html")
+    return render(request, "core/petshop.html")
 
 
 def portfolio(request):

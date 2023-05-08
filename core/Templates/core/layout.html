@@ -27,13 +27,11 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">Veterinaria Mis Mascotas</a>                
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item {% if request.path == ''%}active{% endif %} mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'home' %}">Inicio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'about' %}">Quienes Somos</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'petshop' %}">Pet Shop</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'portfolio' %}">Servicios</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'contact' %}">Contacto</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'contact' %}">Login</a></li>
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item {% if request.path == '/' %} active {% endif %} mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'home' %}">Inicio</a></li>
+                        <li class="nav-item {% if request.path == '/about' %} active {% endif %} mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'about' %}">Quienes Somos</a></li>
+                        <li class="nav-item {% if request.path == '/portfolio' %} active {% endif %} mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'portfolio' %}">Servicios</a></li>
+                        <li class="nav-item {% if request.path == '/contact' %} active {% endif %}mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'contact' %}">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -160,6 +158,8 @@
             </div>
         </div>
         
+
+
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -168,7 +168,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-        
+
                                     <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Peluquería</h2>
                                     
                                     <div class="divider-custom">
@@ -191,7 +191,8 @@
                 </div>
             </div>
         </div>
-        
+
+
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">

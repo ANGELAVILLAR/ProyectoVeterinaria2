@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'articulo',
-    'carro',
-    
+    'carro'
+    'perfiles',
 ]
     
 
@@ -140,3 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/inicia-sesion/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MEDIA_URL='veterinary/media/'
+MEDIA_ROOT=BASE_DIR / 'veterinary/media'

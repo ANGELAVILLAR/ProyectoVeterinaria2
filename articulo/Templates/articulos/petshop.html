@@ -1,0 +1,51 @@
+{% extends 'core/layout.html'%}
+
+{% block title %}Petshot{% endblock %} 
+
+{% block background %}
+{% load static %}
+{% static 'core\assets\img\portfolio\logovet.png' %}{% endblock %}
+
+
+{% block header %}
+<header class="masthead bg-primary text-white text-center">            
+    <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text-uppercase mb-0">Mis Mascotas</h1>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>                                
+        <p class="masthead-subheading font-weight-light mb-0">Dra. Nelcy Urueña Rivera</p>
+    </div>
+</header>
+{% endblock %}
+
+{%block content %}
+<div class="container">
+    <div style="float: right ;">
+        <p style="color: black">total: {{importe_total_carro}}</p>
+        {%include "carro/widget.html"%}
+    </div>
+
+    <div class="row">
+
+    {% for articulo in articulo %}
+        <div class="col-md-3">
+            <div class="card" style="width: 90%; margin: 8px;"> 
+                <img src="{{articulo.imagen.url}}">
+                <div class="card-body" style="text-align: center;">
+                    <h6 class="card-title">{{articulo.name}}</h6>
+                    <p class="card-text">{{articulo.price}}&nbsp;</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{% url 'carro:agregar' articulo.id %}" class="btn btn-success">Agregar al carro</a>
+                </div>
+            </div> 
+        </div>
+   
+    {%endfor%}
+    </div>
+</div>
+
+{%endblock%}

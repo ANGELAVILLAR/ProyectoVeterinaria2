@@ -21,3 +21,4 @@ def contact(request):
 def login(request):
     return render(request, "core/login.html")
 
+

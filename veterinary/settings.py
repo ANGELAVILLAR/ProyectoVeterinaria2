@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'core',
     'articulo',
     'carro',
+    'autenticacion',
+    'crispy_forms',   
     
 ]
     
@@ -64,7 +66,7 @@ ROOT_URLCONF = 'veterinary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,6 +139,4 @@ MEDIA_ROOT= BASE_DIR /'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = '/inicia-sesion/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK='bootstrap4'

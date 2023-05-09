@@ -1,0 +1,24 @@
+{% extends 'core/layout.html' %}
+
+{% block title %}Pet Shot{% endblock %} 
+
+{% block background %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% static 'core\assets\img\portfolio\logovet.png' %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="">
+    {% csrf_token %}
+    <div style="width: 20%; margin: auto;">
+    {{ form| crispy }}
+    <button type="submit" class="btn btn-success" style="margin-bottom: 5px;">Resgistrate</button>
+    </div>
+</form>
+
+{% endblock %}

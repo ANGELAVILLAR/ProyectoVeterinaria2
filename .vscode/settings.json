@@ -3,6 +3,7 @@
         "agregar",
         "articulo",
         "articulos",
+        "autenticacion",
         "autheticated",
         "cantidad",
         "carro",
@@ -15,6 +16,7 @@
         "iamgen",
         "imagen",
         "importe",
+        "JIJIJIJIJ",
         "limpiar",
         "logovet",
         "nombre",
@@ -22,8 +24,11 @@
         "precio",
         "producto",
         "productos",
+        "registro",
+        "Resgistrate",
         "restar",
         "servicio",
-        "Suma"
+        "Suma",
+        "usuario"
     ]
 }

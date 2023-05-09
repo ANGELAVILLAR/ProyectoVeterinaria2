@@ -7,23 +7,23 @@ from articulo.models import Articulo
 # Create your views here.
 def agregar_articulo(request, articulo_id):
     carro=Carro(request)
-    articulo=Articulo.objects.get(id=ArticuloAdmin)
+    articulo=Articulo.objects.get(id=articulo_id)
     carro.agregar(articulo=articulo)
-    return redirect("articulo")
+    return redirect("petshop")
 
 def eliminar_articulo(request, articulo_id):
     carro=Carro(request)
-    articulo=Articulo.objects.get(id=ArticuloAdmin)
+    articulo=Articulo.objects.get(id=articulo_id)
     carro.eliminar(articulo=articulo)
-    return redirect("articulo")
+    return redirect("petshop")
 
 def restar_articulo(request, articulo_id):
     carro=Carro(request)
-    articulo=Articulo.objects.get(id=ArticuloAdmin)
+    articulo=Articulo.objects.get(id=articulo_id)
     carro.restar_articulo(articulo=articulo)
-    return redirect("articulo")
+    return redirect("petshop")
 
 def limpiar_carro(request, articulo_id):
     carro=Carro(request)    
     carro.limpiar_carro()
-    return redirect("articulo")
+    return redirect("petshop")

@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 app_name="carro"
+
 urlpatterns = [
     
     path('agregar/<int:articulo_id>/', views.agregar_articulo, name="agregar"),

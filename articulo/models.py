@@ -16,7 +16,7 @@ class Articulo(models.Model):
     reference=models.IntegerField(max_length=30)
     name=models.CharField(max_length=100)
     description=models.CharField(max_length=200)
-    price=models.DecimalField(max_digits=6, decimal_places=3)
+    price=models.DecimalField(max_digits=6, decimal_places=1)
     category=models.ManyToManyField(Categoria)    
     imagen=models.ImageField(upload_to='articulo')    
     created=models.DateTimeField(auto_now_add=True)

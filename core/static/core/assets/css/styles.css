@@ -11489,3 +11489,14 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+img, svg {
+  vertical-align: middle;
+}

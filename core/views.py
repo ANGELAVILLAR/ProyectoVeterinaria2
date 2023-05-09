@@ -18,7 +18,7 @@ def contact(request):
     context= {'contacts':contacts}
     return render(request, 'core/contact.html', context)
 
-# def login(request):
-#     return render(request, "core/login.html")
+def login(request):
+    return render(request, "core/login.html")
 
 

@@ -1,15 +1,12 @@
-from decimal import Decimal
-
-
 class Carro:
     def __init__(self,request):
-        # """self.request =request
-        # self.session=request.session
-        # carro=self.session.get("carro")
-        # if not carro:
-        #     carro=self.session["carro"]={}"""
-        # #else:
-        self.carro=carro
+        self.request =request
+        self.session=request.session
+        carro=self.session.get("carro")
+        if not carro:
+            carro=self.session["carro"]={}
+        else:
+            self.carro=carro
             
     def agregar(self, articulo):
         if (str(articulo.id)not in self.carro.keys()):
@@ -24,7 +21,6 @@ class Carro:
             for key,value in self.carro.items():
                 if key==str(articulo.id):
                     value["cantidad"]=value["cantidad"]+1
-                    value["precio"]=int(value["precio"]) + int(articulo.price)
                     break
         self.guardar_carro()
 
@@ -42,7 +38,6 @@ class Carro:
         for key,value in self.carro.items():
             if key==str(articulo.id):
                 value["cantidad"]=value["cantidad"]-1
-                value["precio"]=int(value["precio"]) - int(articulo.price)
                 if value["cantidad"]<1:
                     self.eliminar(articulo)                
                 break

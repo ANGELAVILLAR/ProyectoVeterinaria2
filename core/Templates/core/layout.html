@@ -35,7 +35,12 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'petshop' %}">Pet Shop</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'portfolio' %}">Servicios</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'contact' %}">Contacto</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'contact' %}">Login</a></li>
+                        {%if user.is_authenticated %}
+                            <a href="{%url 'cerrar_sesion'%}">cerrar sesion</a>
+                        {% else %}
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'logear' %}">Login</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'autenticacion' %}">Registrate</a></li>
+                        {%endif%}
                     </ul>
                 </div>
             </div>
@@ -55,7 +60,7 @@
                 </div>                                
                 <p class="masthead-subheading font-weight-light mb-0">Dra. Nelcy Urueña Rivera</p>
             </div>
-            <div style="text-align: right; margin-right: 50px; color: red ;">JIJIJIJIJ</div>
+            
         </header>
         
         <!--Contenido-->

@@ -36,7 +36,7 @@ def logear(request):
             contra=form.cleaned_data.get("password")
             usuario=authenticate(username=nombre_usuario, password=contra)
             if usuario is not None:
-                login(request. usuario)
+                login(request, usuario)
                 return redirect('home')
             else:
                 messages.error(request, "Usuario no valido")

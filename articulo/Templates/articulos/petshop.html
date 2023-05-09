@@ -25,7 +25,12 @@
 <div class="container">
     <div style="float: right ;">
         <!-- <p style="color: black">Total: {{importe_total_carro}}</p> -->
+        {%if request.user.is_authenticated%}
+        
         {%include "carro/widget.html"%}
+        {%else%}
+        <div class="alert alert-danger text-center">login para carro</div>
+        {%endif%}
     </div>
 
     

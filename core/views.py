@@ -1,7 +1,10 @@
 from django.shortcuts import render
+
+from carro.carro import Carro
 from .models import Contact
 
 def home(request):
+    carro=Carro(request)
     return render(request, "core/home.html")
 
 def about(request):

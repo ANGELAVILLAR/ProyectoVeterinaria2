@@ -42,9 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'articulo',
-    'carro',
+    'carro',    
     'autenticacion',
-    'crispy_forms',   
+    'crispy_forms',    
+    
     
 ]
     
@@ -136,6 +137,8 @@ MEDIA_ROOT= BASE_DIR /'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_crazy_service.settings')
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 

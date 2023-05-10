@@ -1,5 +1,7 @@
 {% extends 'core/layout.html' %}
 
+{% load static %}
+
 {% block title %}Acerca de{% endblock %} 
 
 {% block background %}{% load static %}{% static 'core\assets\img\portfolio\logovet.png' %}{% endblock %}
@@ -20,33 +22,87 @@
 
 {% block content %}
 
-<section class="page-section bg-primary text-white mb-0" id="about">
+<section class="page-section portfolio" id="portfolio">
     <div class="container">
         
-        <h2 class="page-section-heading text-center text-uppercase text-white">¿QUIENES SOMOS?</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">¿Quienes Somos?</h2>
         
-        <div class="divider-custom divider-light">
+        <div class="divider-custom">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
         
-        <h3 class="page-section-heading text-center text-uppercase text-white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id cursus dui, a pulvinar elit. Cras cursus commodo convallis. Nulla facilisi. Aliquam ultricies quis enim a rutrum. Maecenas aliquet mauris at diam pulvinar, ut viverra ipsum posuere. In lectus justo, auctor sed ultricies non, rutrum eu sapien. Mauris auctor vestibulum fringilla. Nulla facilisi.
+        <p class="font size="28" text-center text-secondary verdana mb-0">
+            Somos una Clínica con trayectoria de más de 10 años de experiencia en medicina veterinaria especializada en la atención de pequeños animales: 
+            caninos y felinos. Contamos atención en cirugía, hospitalización, servicio de incubadora, atención en consulta general y suministro  de medicamentos.  
 
-            Sed imperdiet nulla quis lobortis lobortis. Curabitur finibus sodales ante ac consequat. Suspendisse consectetur cursus faucibus. Fusce eu condimentum arcu, vitae auctor ipsum. Donec semper laoreet ultricies. Nam mollis blandit enim. Phasellus bibendum leo eget dignissim commodo. Praesent nec nisi sit amet ante vestibulum pellentesque ut sed eros. Curabitur eleifend mi id metus ullamcorper imperdiet. Mauris pulvinar mattis congue. Vestibulum aliquet efficitur mollis. Fusce ut ultricies ante, sed varius turpis. </h3>
+            Adicionalmente, ofrecemos a nuestros clientes atención en belleza canina, venta de productos médicos veterinarios, juguetes, ropa y accesorios
+            además  de variedad de alimentos especializados para perros y gatos. 
+        </p>
 
-        <div class="row">
-            <div class="col-lg-4 ms-auto"><p class="lead">Este es un prototipo para la página web de la veterinaria Mis Mascotas.</p></div>
-            <div class="col-lg-4 me-auto"><p class="lead">Proyecto formativo SENA. ADSI 427299</p></div>
-        </div>
-        
-        <div class="text-center mt-4">
-            <a class="btn btn-xl btn-outline-light">
-                <i class="fas fa-download me-2"></i>
-                Ingresa a la Tienda!
-            </a>
+</section>
+
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid  rounded-circle" src={% static 'core\assets\img\about\MISION.jpeg' %} alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Misión </h2>
+                    <p>Brindar atención de alta calidad, promoviendo el bienestar de los animales aplicando los conocimientos médicos de años de experiencia, en el área médica veterinaria a través de diagnósticos y tratamientos validados con estándares de la medicina, que permitirá asegurar una atención óptima, siendo nuestro compromiso atender a nuestros pacientes con amor, gentileza y profesionalismo
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+</section>
+
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src={% static 'core\assets\img\about\VISION.jpeg' %}  alt="..." /></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">VISION</h2>
+                    <p>Posicionar nuestra clínica veterinaria para el año 2028 como una de los mejores centros de atención veterinaria en la ciudad, contando con profesionales con enfoque médico ético, apoyados en el conocimiento para brindar una atención de calidad, con honestidad teniendo en cuenta los estándares de excelencia hacia la atención integral de nuestros pacientes. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src={% static 'core\assets\img\about\VALORES.jpeg' %}  alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">VALORES</h2>
+                    <p>1.	INTEGRIDAD: Estamos comprometidos con un servicio honesto y ético, Siempre vamos a actuar con el mejor interés de nuestros pequeños pacientes y propietarios.
+                        <br/>
+                        2.	EXPERIENCIA: Nos responsabilizamos en estar en continua formación para estar al día con los avances médicos veterinarios y poder ofrecer el tratamiento más favorable para su mascota.
+                        <br/>                        
+                        3.	COMUNICACION: Nos parece de extrema importancia, el tipo de comunicación que tengamos con el propietario, por lo que incentivaremos aquellas acciones que permiten al propietario de la mascota en forma didáctica, el proceso por el que pasa su mascota y el plan de atención que requiere.
+                        <br/>                        
+                        4.	CUIDADO: Por encima de todo, nuestra preocupación se enfoca en el bienestar y comodidad de nuestros pacientes y sus dueños, con un cuidado compasivo y de calidad.
+                        <br/>                        
+                        5.	RESPONSABILIDAD: Trabajamos con seriedad, acorde a todos los parámetros de atención veterinaria, siendo coherentes con nuestro compromiso de brindar una atención de calidad
+                        <br/>                        
+                        6.	HONESTIDAD: Realizamos todas nuestras operaciones con rectitud ofreciendo productos y servicios  de calidad garantizada.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </section>
 
 {% endblock %}

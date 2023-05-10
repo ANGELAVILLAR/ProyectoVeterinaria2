@@ -31,16 +31,14 @@
         {%else%}
         <div class="alert alert-danger text-center">login para carro</div>
         {%endif%}
-    </div>
-
-    
+    </div>   
 
     <div class="row">
 
     {% for articulo in articulo %}
         <div class="col-md-3">
             <div class="card" style="width: 90%; margin: 8px;"> 
-                <img src="{{articulo.imagen.url}}">
+                <img class="width:25; height: 25%; " src="{{articulo.imagen.url}}">
                 <div class="card-body" style="text-align: center;">
                     <h6 class="card-title">{{articulo.name}}</h6>
                     <p class="card-text">{{articulo.price}}&nbsp;</p>

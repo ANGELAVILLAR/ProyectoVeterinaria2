@@ -23,6 +23,8 @@ urlpatterns = [
     path('articulos/',include("articulo.urls")),
     path('carro/',include("carro.urls")),
     path('autenticacion/',include("autenticacion.urls")),
+    path('login/',include("autenticacion.urls")),
+    # path("accounts/", include('allauth.urls')),
     #path('',include("producto.urls")),       
     #path('login/', views.contact, name="login"),    
 ]

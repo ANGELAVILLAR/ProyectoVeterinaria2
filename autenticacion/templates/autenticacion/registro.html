@@ -12,13 +12,31 @@
 {% endblock %}
 
 {% block content %}
+<br>
+<div class="mb-3 descripcion">
+    <h4>Registro de Usuario</h4>
+</div>
 
-<form method="post" action="">
-    {% csrf_token %}
-    <div style="width: 20%; margin: auto;">
-    {{ form| crispy }}
-    <button type="submit" class="btn btn-success" style="margin-bottom: 5px;">Resgistrate</button>
-    </div>
-</form>
+<div class="mb-3">
+    <form enctype="multipart/form-data" action="{% url 'registro' %}" method="POST">
+        {% csrf_token %}
+        {% load widget_tweaks %}
+
+        <div class="row g-3" >
+            {% for field in form %}
+            <div class="col-12 form-group" style="width: 35%; text-align: center; margin: auto; ">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {% render_field field class="form-control" %}
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="row justify-content-end">
+            <div class="mb-3 col-6" style="width: fit-content; margin-right:7%;">
+                <input type="submit" value="Registarse" class="form-control btn btn-warning" />
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

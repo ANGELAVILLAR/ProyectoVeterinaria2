@@ -1,15 +1,12 @@
-from django.contrib import admin
-from django.urls import path
-from .views import Registro,  cerrar_sesion,logear
-from django.conf import settings
-from django.conf.urls.static import static
 
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    
-    path('', Registro.as_view(), name="autenticacion"),
-    path('cerrar_sesion', cerrar_sesion, name="cerrar_sesion"),
-    path('logear', logear, name="logear"),
-    # path('categoria/<int:categoria_id>/', views.categoria, name="categoria"),
-    
+    #path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('registro/', views.registrar, name='registro'),
+     
+    #path('activate/<uidb64>/<token>/', views.activate, name='activate'),
 ]

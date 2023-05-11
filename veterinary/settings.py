@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'articulo',
     'carro',    
     'autenticacion',
-    'crispy_forms',    
+    'crispy_forms',  
+    'widget_tweaks',  
     
     
 ]
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'veterinary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +81,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'veterinary.wsgi.application'
+AUTH_USER_MODEL = 'autenticacion.usuario'
+# AUTH_USER_MODEL = 'autenticacion.login'
 
 
 # Database
@@ -91,7 +94,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

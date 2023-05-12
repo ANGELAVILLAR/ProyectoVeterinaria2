@@ -13,7 +13,7 @@ class Categoria(models.Model):
         return self.name
 
 class Articulo(models.Model):
-    reference=models.IntegerField(max_length=30)
+    reference=models.IntegerField(max_length=25)
     name=models.CharField(max_length=100)
     description=models.CharField(max_length=200)
     price=models.DecimalField(max_digits=6, decimal_places=1)

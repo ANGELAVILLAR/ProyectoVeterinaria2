@@ -4,7 +4,7 @@
 
 {% block background %}
 {% load static %}
-{% static 'core\assets\img\portfolio\logovet.png' %}{% endblock %}
+{% static 'core/assets/img/portfolio/logovet.png' %}{% endblock %}
 
 
 {% block header %}
@@ -23,13 +23,13 @@
 
 {%block content %}
 <div class="container">
-    <div style="float: right ;">
+    <div style="float: right ; margin-top: 10px;">
         <!-- <p style="color: black">Total: {{importe_total_carro}}</p> -->
         {%if request.user.is_authenticated%}
         
         {%include "carro/widget.html"%}
         {%else%}
-        <div class="alert alert-danger text-center">login para carro</div>
+        <div class="alert alert-danger text-center">Registrate o Inicia sesion para realizar compra</div>
         {%endif%}
     </div>   
 

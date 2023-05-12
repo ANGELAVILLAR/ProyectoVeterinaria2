@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'autenticacion',
     'crispy_forms',  
     'widget_tweaks',  
+    'pedido',  
     
     
 ]
